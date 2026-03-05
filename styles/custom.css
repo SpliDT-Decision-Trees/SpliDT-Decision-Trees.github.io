@@ -43,7 +43,11 @@
 
 /* Light mode */
 [data-md-color-scheme="default"] .hero-section {
-  background: #ffffff;
+  background: linear-gradient(
+    180deg,
+    #111827 0%,
+    #0f172a 100%
+  );
   padding: 2.5rem 5rem 4rem 5rem;
 }
 
@@ -69,20 +73,10 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.0rem;          
   font-weight: 600;            
-  color: #e5e5e5;
+  color: #f3f4f6;
   letter-spacing: -0.3px;
   margin-top: 0;
   margin-bottom: 1.2rem;
-}
-
-/* Dark mode */
-[data-md-color-scheme="slate"] .hero-subtitle {
-  color: #f3f4f6;
-}
-
-/* Light mode */
-[data-md-color-scheme="default"] .hero-subtitle {
-  color: #111827;
 }
   
 .hero-buttons {
@@ -242,4 +236,12 @@ body.light-mode .hero-btn {
   color: #ff2e88;
   text-decoration: none;
   transition: color 0.25s ease;
+}
+
+.feature-image img {
+  width: 100%;
+  max-width: 1100px;   /* control how large */
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
