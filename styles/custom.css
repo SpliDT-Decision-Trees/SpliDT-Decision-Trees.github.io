@@ -6,6 +6,13 @@
   display: block;
 }
 
+[data-md-color-scheme="slate"] .only-light {
+  display: none;
+}
+[data-md-color-scheme="slate"] .only-dark {
+  display: block;
+}
+
 /* Dark mode documentation background */
 [data-md-color-scheme="slate"] .md-main {
   background-color: #0f172a;  /* blue-black */
