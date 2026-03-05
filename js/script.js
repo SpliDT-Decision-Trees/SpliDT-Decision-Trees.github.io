@@ -1,25 +1,46 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const sentence = "A Pipeline-Aware Sub-Traversal Cache for Modern SmartNICs";
-    const words = sentence.split("");
-    let i = 0;
-    const container = document.getElementById('animated-text');
+<script>
+  const buttons = document.querySelectorAll(".hero-btn");
 
-    function showWord() {
-        if (i < words.length) {
-            container.textContent += words[i];
-            i++;
-            setTimeout(showWord, 40); // Timing between words
-        } else {
-            // Reset and restart the animation after a delay
-            setTimeout(() => {
-                container.textContent = '';
-                i = 0;
-                showWord();
-            }, 3000); // Delay before restarting
-        }
-    }
-    showWord();
-});
+  // Set first button active initially
+  buttons[0].classList.add("active");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("mouseenter", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
+  // Optional: restore first button when mouse leaves container
+  document.querySelector(".hero-buttons")
+    .addEventListener("mouseleave", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      buttons[0].classList.add("active");
+    });
+</script>
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const sentence = "Partitioned Decision Trees for Scalable Stateful Inference at Line Rate";
+//     const words = sentence.split("");
+//     let i = 0;
+//     const container = document.getElementById('animated-text');
+
+//     function showWord() {
+//         if (i < words.length) {
+//             container.textContent += words[i];
+//             i++;
+//             setTimeout(showWord, 40); // Timing between words
+//         } else {
+//             // Reset and restart the animation after a delay
+//             setTimeout(() => {
+//                 container.textContent = '';
+//                 i = 0;
+//                 showWord();
+//             }, 3000); // Delay before restarting
+//         }
+//     }
+//     showWord();
+// });
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     fetch('https://api.github.com/repos/scalalang2/golang-fifo')
